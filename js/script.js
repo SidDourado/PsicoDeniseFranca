@@ -63,3 +63,67 @@ function typeEffect() {
 window.onload = () => {
     setTimeout(typeEffect, 500); // Pequeno delay antes de começar
 };
+
+
+// Validacao e Mascara Ava Gratuita
+document.addEventListener("DOMContentLoaded", function() {
+  var input = document.getElementById("whatsapp");
+
+  input.addEventListener("input", function(e) {
+    let numbers = this.value.replace(/\D/g, ''); // Remove tudo que não for número
+    if (numbers.length > 11) numbers = numbers.slice(0, 11);
+
+    let formatted = numbers;
+
+    if (numbers.length > 0) {
+      formatted = "(" + numbers.substring(0, 2);
+    }
+    if (numbers.length >= 3) {
+      formatted += ")" + numbers.substring(2, 7);
+    }
+    if (numbers.length >= 8) {
+      formatted += "-" + numbers.substring(7, 11);
+    }
+
+    this.value = formatted;
+  });
+});
+
+
+//Envio o Email usando o Email Js
+emailjs.init({
+  publicKey: "xRNJWyODol9wVP9XN"
+});
+
+// Função de envio
+document.getElementById('formulario').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  var nome = document.getElementById('nome').value;
+  var whatsapp = document.getElementById('whatsapp').value;
+
+  // Executar o recaptcha
+  grecaptcha.ready(function() {
+    grecaptcha.execute('6LcTYCcrAAAAAMN1-8pYbqWkZJO5a_xLAZ4EdJtL', { action: 'submit' }).then(function(token) {
+      
+      // Aqui você pode adicionar o token no templateParams se quiser validar depois no backend.
+      var templateParams = {
+        nome: nome,
+        whatsapp: whatsapp,
+        'g-recaptcha-response': token // enviando o token junto
+      };
+
+      emailjs.send("service_4xg01d3", "template_vp3p6w3", templateParams)
+        .then(function(response) {
+          console.log('Sucesso:', response);
+          alert("Solicitação enviada com sucesso!");
+        }, function(error) {
+          console.log('Erro:', error);
+          alert("Houve um erro ao agendar sua avaliação. Tente novamente.");
+        });
+
+    });
+  });
+});
+
+
