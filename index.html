@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Denise França - Psicanalista</title>
 
   <!-- CSS -->
@@ -27,6 +28,14 @@
 
   <!-- JS -->
   <script defer src="js/script.js"></script>
+
+  <!-- Email Js -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Segurança Recaptcha -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LcTYCcrAAAAAMN1-8pYbqWkZJO5a_xLAZ4EdJtL"></script>
+
+
 </head>
 <!-- Header -->
 <header>
@@ -104,7 +113,10 @@
 </section>
 
 <!-- Botão Fixo -->
-<button class="btn">Sessão Gratuita</button>
+<button class="btn-sessao" id="btnSessao">
+  <i class="fas fa-calendar-alt"></i> 
+  <span class="texto-inicial">Sessão</span>
+</button>
 
 
 <!-- Apresentação -->
@@ -262,6 +274,31 @@
     </div>
   </div>
 </section>
+
+<!-- Avaliacao Gratuita -->
+<section class="avaliacaoGratuita" id="avaliacao">
+  <div class="container">
+    <div class="section-title text-center" data-aos="fade-up">
+      <span class="conheca">Avaliação Gratuita</span>
+      <h2 class="tituloAmbiente">Agende sua Avaliação</h2>
+      <div class="title-icon">
+        <span class="iconeGaleria"><i class="fa-solid fa-comments"></i></span>
+      </div>
+      <p class="textoAmbiente">Preencha seus dados para agendar uma avaliação gratuita</p>
+    </div>
+
+    <form id="formulario" class="formulario" data-aos="fade-up" data-aos-delay="200">
+      <div class="form-group">
+        <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+      </div>
+      <div class="form-group">
+        <input type="tel" id="whatsapp" name="whatsapp" placeholder="Seu WhatsApp" required>
+      </div>
+      <button type="submit" class="btn-enviar">Agendar Avaliação</button>
+    </form>
+  </div>
+</section>
+
 
 <section class="depoimentos" id="depoimentos">
   <h2>O que dizem os pacientes</h2>
@@ -451,7 +488,11 @@
     <div class="footer-section contact">
       <h3>Contato</h3>
       <p><i class="fas fa-phone-alt"></i> (18) 99655-4757</p>
-      <p><i class="fas fa-envelope"></i> denisefranca@gmail.com.br</p>
+      <!-- <p><i class="fas fa-envelope"></i> denisemedeirospsico@gmail.com</p> -->
+      <p>
+        <i class="fas fa-envelope"></i> 
+        <a href="mailto:denisemedeirospsico@gmail.com">denisemedeirospsico@gmail.com</a>
+      </p>
       <p><i class="fas fa-map-marker-alt"></i> Av. Cunha Cintra, 708 - Centro, Penápolis - SP</p>
     </div>
 
