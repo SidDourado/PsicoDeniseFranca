@@ -96,34 +96,97 @@ emailjs.init({
 });
 
 // Função de envio
+// document.getElementById('formulario').addEventListener('submit', function(event) {
+//   event.preventDefault();
+
+//   var nome = document.getElementById('nome').value;
+//   var whatsapp = document.getElementById('whatsapp').value;
+
+//   // Executar o recaptcha
+//   grecaptcha.ready(function() {
+//     grecaptcha.execute('6LcTYCcrAAAAAMN1-8pYbqWkZJO5a_xLAZ4EdJtL', { action: 'submit' }).then(function(token) {
+      
+//       var templateParams = {
+//         nome: nome,
+//         whatsapp: whatsapp,
+//         'g-recaptcha-response': token 
+//       };
+
+      
+
+//       emailjs.send("service_4xg01d3", "template_vp3p6w3", templateParams)
+//       .then(function(response) {
+//         console.log('Sucesso:', response);
+//         document.getElementById("modalSucesso").style.display = "block";
+//       }, function(error) {
+//           console.log('Erro:', error);
+//           alert("Houve um erro ao agendar sua sessão. Tente novamente.");
+//         });
+
+//     });
+//   });
+// });
+
+
+
+
+
 document.getElementById('formulario').addEventListener('submit', function(event) {
   event.preventDefault();
+
+  // Mostrar carregamento
+  document.getElementById("modalCarregando").style.display = "block";
 
   var nome = document.getElementById('nome').value;
   var whatsapp = document.getElementById('whatsapp').value;
 
-  // Executar o recaptcha
   grecaptcha.ready(function() {
     grecaptcha.execute('6LcTYCcrAAAAAMN1-8pYbqWkZJO5a_xLAZ4EdJtL', { action: 'submit' }).then(function(token) {
       
-      // Aqui você pode adicionar o token no templateParams se quiser validar depois no backend.
       var templateParams = {
         nome: nome,
         whatsapp: whatsapp,
-        'g-recaptcha-response': token // enviando o token junto
+        'g-recaptcha-response': token 
       };
 
       emailjs.send("service_4xg01d3", "template_vp3p6w3", templateParams)
-        .then(function(response) {
-          console.log('Sucesso:', response);
-          alert("Solicitação enviada com sucesso!");
-        }, function(error) {
-          console.log('Erro:', error);
-          alert("Houve um erro ao agendar sua avaliação. Tente novamente.");
-        });
+      .then(function(response) {
+        console.log('Sucesso:', response);
+        
+        // Esconde o carregamento
+        document.getElementById("modalCarregando").style.display = "none";
+    
+        // Exibe a modal de sucesso
+        document.getElementById("modalSucesso").style.display = "block";
+    
+        // Limpa o formulário
+        document.getElementById("formulario").reset();
+    
+      }, function(error) {
+        console.log('Erro:', error);
+        document.getElementById("modalCarregando").style.display = "none";
+        alert("Houve um erro ao agendar sua sessão. Tente novamente.");
+      });
 
     });
   });
 });
+
+
+// Fecha ao clicar no botão OK
+document.getElementById("fecharModal").addEventListener("click", function () {
+  document.getElementById("modalSucesso").style.display = "none";
+});
+
+// Fecha ao clicar fora da modal de sucesso
+window.addEventListener("click", function (event) {
+  const modalSucesso = document.getElementById("modalSucesso");
+  if (event.target === modalSucesso) {
+    modalSucesso.style.display = "none";
+  }
+});
+
+
+
 
 
