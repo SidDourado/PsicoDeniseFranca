@@ -167,43 +167,50 @@ button:hover .filled {
 }
 
 /* Botao fixo */
-.btn {
-  color: purple;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: 2px solid purple;
-  padding: 10px 20px;
-  font-size: 17px;
-  cursor: pointer;
-  font-weight: bold;
-  background: transparent;
-  transition: all 1s;
-  overflow: hidden;
+.btn-sessao {
   position: fixed;
-  right: 0px;
-  bottom: 200px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #F4C2C2; 
+  color: #fff;
+  border: none;
+  padding: 14px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px !important;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  white-space: nowrap;
   z-index: 9999;
+  gap: 10px;
 }
 
-.btn:hover {
-  color: white;
+.btn-sessao .texto-hover {
+  margin-left: 8px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
-.btn::before {
+.btn-sessao:hover {
+  padding-right: 40px; 
+  background-color: #f7b5b5;
+}
+
+.btn-sessao:hover .texto-hover {
+  opacity: 1;
+}
+
+.btn-sessao:hover .texto-inicial::after {
+  content: " Gratuita";
+  opacity: 1;
+}
+
+.btn-sessao .texto-inicial::after {
   content: "";
-  position: absolute;
-  height: 100%;
-  width: 0%;
-  top: 0;
-  left: -40px;
-  transform: skewX(45deg);
-  background-color: purple;
-  z-index: -1;
-  transition: all 1s;
-}
-
-.btn:hover::before {
-  width: 160%;
+  transition: opacity 0.4s ease;
+  opacity: 0;
 }
 
 
@@ -567,10 +574,63 @@ button:hover .filled {
   margin-bottom: 0;
 }
 
+
+/* Avaliacao Gratuita */
+.avaliacaoGratuita {
+  background: #ffffff;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulario {
+  max-width: 600px;
+  width: 100%;
+  margin: 30px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario input {
+  padding: 15px;
+  border: 1px solid #c18d94;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: Raleway, sans-serif;
+  color: #34495e;
+}
+
+.formulario input::placeholder {
+  color: #b3b3b3;
+}
+
+.btn-enviar {
+  padding: 15px;
+  background-color: #e87db2;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: Raleway, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #c06a98;
+}
+
 /* PAcientes */
 .depoimentos {
   text-align: center;
-  padding: 30px 20px 50px 20px;
+  padding: 60px 20px 60px 20px;
   background: #f6f1f1;
   display: flex;
   flex-direction: column;
@@ -848,6 +908,12 @@ button:hover .filled {
 .footer-section p {
   line-height: 1.6;
   color: #ccc;
+}
+
+.contact p a{
+  text-decoration: none;
+  color: #fff;
+
 }
 
 .footer-section h3 {
