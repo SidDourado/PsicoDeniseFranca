@@ -250,10 +250,11 @@ button:hover .filled {
   color: #985151;
 }
 
-.sobre-text h2 {
+.sobre-text h1 {
   color: hsl(355 33% 72%);
   font-family: 'Poppins';
   font-weight: 600;
+  font-size: 2rem;
 
 }
 
@@ -1123,6 +1124,15 @@ button:hover .filled {
   width: 80px;
   height: 80px;
   align-self: center;
+}
+
+.fa-shield-alt{
+  margin-right: 3px;
+}
+
+.hours a{
+  text-decoration: none;
+  color: #ffffff;
 }
 
 
