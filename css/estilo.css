@@ -1145,6 +1145,11 @@ button:hover .filled {
     text-align: center;
   }
 
+  .fotoProfissional img{
+    width: 300px;
+    height: 300px;
+  }
+
   #galeria {
     padding: 0px 0px
   }
@@ -1229,6 +1234,11 @@ button:hover .filled {
 }
 
 @media (max-width: 480px) {
+  .fotoProfissional img{
+    width: 300px;
+    height: 300px;
+  }
+
   .depoimentos h2 {
     font-size: 1.8rem;
   }
