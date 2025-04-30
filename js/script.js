@@ -103,7 +103,7 @@ document.getElementById('formulario').addEventListener('submit', function(event)
   var whatsapp = document.getElementById('whatsapp').value;
 
   grecaptcha.ready(function() {
-    grecaptcha.execute('6LcTYCcrAAAAAMN1-8pYbqWkZJO5a_xLAZ4EdJtL', { action: 'submit' }).then(function(token) {
+    grecaptcha.execute('6Lff5CkrAAAAAPaaBhtikMyRCtm8qzFfIyCFlQh_', { action: 'submit' }).then(function(token) {
       
       var templateParams = {
         nome: nome,
