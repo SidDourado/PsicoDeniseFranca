@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://www.psicanalistadenise.com.br/sitemap.xml
