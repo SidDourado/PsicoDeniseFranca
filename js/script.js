@@ -22,7 +22,7 @@ function irParaFeedback(i) {
   mostrarFeedback();
 }
 
-setInterval(() => mudarFeedback(1), 5000);
+setInterval(() => mudarFeedback(1), 15000);
 mostrarFeedback();
 
 
@@ -56,12 +56,12 @@ function typeEffect() {
     if (item < texto.length) {
         document.getElementById("digitacao").innerHTML += texto.charAt(item);
         item++;
-        setTimeout(typeEffect, 150); // Velocidade da digitação
+        setTimeout(typeEffect, 150);
     }
 }
 
 window.onload = () => {
-    setTimeout(typeEffect, 500); // Pequeno delay antes de começar
+    setTimeout(typeEffect, 500);
 };
 
 
@@ -95,46 +95,8 @@ emailjs.init({
   publicKey: "xRNJWyODol9wVP9XN"
 });
 
-// Função de envio
-// document.getElementById('formulario').addEventListener('submit', function(event) {
-//   event.preventDefault();
-
-//   var nome = document.getElementById('nome').value;
-//   var whatsapp = document.getElementById('whatsapp').value;
-
-//   // Executar o recaptcha
-//   grecaptcha.ready(function() {
-//     grecaptcha.execute('6LcTYCcrAAAAAMN1-8pYbqWkZJO5a_xLAZ4EdJtL', { action: 'submit' }).then(function(token) {
-      
-//       var templateParams = {
-//         nome: nome,
-//         whatsapp: whatsapp,
-//         'g-recaptcha-response': token 
-//       };
-
-      
-
-//       emailjs.send("service_4xg01d3", "template_vp3p6w3", templateParams)
-//       .then(function(response) {
-//         console.log('Sucesso:', response);
-//         document.getElementById("modalSucesso").style.display = "block";
-//       }, function(error) {
-//           console.log('Erro:', error);
-//           alert("Houve um erro ao agendar sua sessão. Tente novamente.");
-//         });
-
-//     });
-//   });
-// });
-
-
-
-
-
 document.getElementById('formulario').addEventListener('submit', function(event) {
   event.preventDefault();
-
-  // Mostrar carregamento
   document.getElementById("modalCarregando").style.display = "block";
 
   var nome = document.getElementById('nome').value;
@@ -152,20 +114,14 @@ document.getElementById('formulario').addEventListener('submit', function(event)
       emailjs.send("service_4xg01d3", "template_vp3p6w3", templateParams)
       .then(function(response) {
         console.log('Sucesso:', response);
-        
-        // Esconde o carregamento
         document.getElementById("modalCarregando").style.display = "none";
-    
-        // Exibe a modal de sucesso
         document.getElementById("modalSucesso").style.display = "block";
-    
-        // Limpa o formulário
         document.getElementById("formulario").reset();
     
       }, function(error) {
         console.log('Erro:', error);
         document.getElementById("modalCarregando").style.display = "none";
-        alert("Houve um erro ao agendar sua sessão. Tente novamente.");
+        alert("Houve um erro ao solicitar sua sessão. Tente novamente.");
       });
 
     });
