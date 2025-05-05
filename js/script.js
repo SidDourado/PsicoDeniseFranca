@@ -25,7 +25,6 @@ function irParaFeedback(i) {
 setInterval(() => mudarFeedback(1), 15000);
 mostrarFeedback();
 
-
 // Banner rotativo
 let slideIndex = 0;
 showSlides();
@@ -64,7 +63,6 @@ window.onload = () => {
     setTimeout(typeEffect, 500);
 };
 
-
 // Validacao e Mascara Ava Gratuita
 document.addEventListener("DOMContentLoaded", function() {
   var input = document.getElementById("whatsapp");
@@ -84,11 +82,9 @@ document.addEventListener("DOMContentLoaded", function() {
     if (numbers.length >= 8) {
       formatted += "-" + numbers.substring(7, 11);
     }
-
     this.value = formatted;
   });
 });
-
 
 //Envio o Email usando o Email Js
 emailjs.init({
@@ -123,7 +119,6 @@ document.getElementById('formulario').addEventListener('submit', function(event)
         document.getElementById("modalCarregando").style.display = "none";
         alert("Houve um erro ao solicitar sua sessão. Tente novamente.");
       });
-
     });
   });
 });
@@ -141,8 +136,3 @@ window.addEventListener("click", function (event) {
     modalSucesso.style.display = "none";
   }
 });
-
-
-
-
-
