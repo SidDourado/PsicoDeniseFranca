@@ -5,7 +5,6 @@ body {
   color: #333;
 }
 
-
 /* Cabecalho */
 header {
   background-color: #A8C3A5;
@@ -17,6 +16,7 @@ header {
 
 .btnAgendaTopo{
   text-decoration: none;
+  color: rgb(134, 124, 124);
 }
 
 .fundoLogo {
@@ -38,7 +38,6 @@ header {
   font-family: auto;
 }
 
-
 .nav-link {
   font-family: Raleway, sans-serif;
   color: #f9f8f8 !important;
@@ -50,7 +49,6 @@ header {
   box-shadow: 2px 3px 5px #f4d0d0;
   border-radius: 10px;
 }
-
 
 button {
   display: flex;
@@ -139,8 +137,6 @@ button:hover .filled {
   animation: beatingHeart 1.2s infinite;
 }
 
-
-
 /* Banner */
 .bannerPrincipal {
   position: relative;
@@ -191,6 +187,11 @@ button:hover .filled {
   gap: 10px;
 }
 
+.btn-sessao a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
 .btn-sessao .texto-hover {
   margin-left: 8px;
   opacity: 0;
@@ -216,7 +217,6 @@ button:hover .filled {
   transition: opacity 0.4s ease;
   opacity: 0;
 }
-
 
 /* Apresentação */
 .sobre {
@@ -271,7 +271,6 @@ button:hover .filled {
   transform: scale(105%);
 }
 
-
 .especialidades {
   text-align: center;
   padding: 80px 20px;
@@ -322,7 +321,6 @@ button:hover .filled {
 
 .tab-link.active {
   background: hsl(355 33% 72%);
-  ;
   color: white;
 }
 
@@ -435,14 +433,11 @@ button:hover .filled {
   font-size: 30px;
 }
 
-
 .textoInformativo {
   font-size: 20px;
   font-style: italic;
   text-align: end;
-
 }
-
 
 .cover {
   flex-direction: column !important;
@@ -475,7 +470,6 @@ button:hover .filled {
 .tituloInformativo {
   font-size: 18px !important;
   font-style: italic;
-  /* font-weight: bold; */
   color: #fff !important;
   font-family: 'Poppins';
 }
@@ -533,7 +527,6 @@ button:hover .filled {
   letter-spacing: 2px;
   font-weight: 500;
   font-family: Raleway, sans-serif;
-  ;
 }
 
 .gallery-item img {
@@ -578,7 +571,6 @@ button:hover .filled {
 .gallery-overlay p {
   margin-bottom: 0;
 }
-
 
 /* Avaliacao Gratuita */
 .avaliacaoGratuita {
@@ -633,7 +625,6 @@ button:hover .filled {
   background-color: #c06a98;
 }
 
-
 /* Janela Modal */
 .modal {
   display: none;
@@ -672,7 +663,6 @@ button:hover .filled {
   font-weight: 600 !important;
   color: #10b410 !important;
   margin-bottom: 10px;
-
 }
 
 .modal-content h2 {
@@ -712,7 +702,6 @@ button:hover .filled {
   font-weight: bold;
   margin: 0;
 }
-
 
 .btn-ok {
   margin-top: 20px;
@@ -757,7 +746,6 @@ button:hover .filled {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
 
 /* PAcientes */
 .depoimentos {
@@ -961,7 +949,6 @@ button:hover .filled {
   padding: 15px 20px;
 }
 
-
 /* Contato */
 .contato {
   text-align: center;
@@ -1009,7 +996,6 @@ button:hover .filled {
   justify-content: center;
 }
 
-
 /* Rodape */
 .footer {
   background-color: #1d2125;
@@ -1045,7 +1031,6 @@ button:hover .filled {
 .contact p a{
   text-decoration: none;
   color: #fff;
-
 }
 
 .footer-section h3 {
@@ -1135,11 +1120,7 @@ button:hover .filled {
   color: #ffffff;
 }
 
-
-
-
 @media (max-width: 768px) {
-
   header,
   .sobre {
     flex-direction: column !important;
@@ -1175,7 +1156,6 @@ button:hover .filled {
   .fundoCardInfo {
     flex-direction: column !important;
   }
-
 
   .carrossel-container {
     flex-direction: column;
@@ -1240,7 +1220,6 @@ button:hover .filled {
     text-align: center;
     padding: 20px;
   }
-
 }
 
 @media (max-width: 480px) {
