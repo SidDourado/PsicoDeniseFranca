@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Agende sua sessão gratuita com a Psicanalista Denise França. Atendimento humanizado, acolhedor e transformador.">
   <meta name="keywords" content="psicanálise, terapeuta, Denise França, ansiedade, depressão, sessão gratuita, saúde emocional">
-  <meta name="google-site-verification" content="googlef0546e343a7cbf37">
+  <meta name="google-site-verification" content="3sjQg1QVNZlYarjNSRboekgtsZ961VgvFtgUA0uGTyA"/>
 
   <title>Psicanalista - Denise França</title>
    
@@ -40,6 +40,16 @@
 
   <!-- Segurança Recaptcha -->
   <script src="https://www.google.com/recaptcha/api.js?render=6Lff5CkrAAAAAPaaBhtikMyRCtm8qzFfIyCFlQh_"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RH5D3CSZKD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RH5D3CSZKD');
+  </script>
 </head>
 <body>
 
@@ -88,7 +98,13 @@
   </nav>
 
   <!-- Btn Consulta -->
-    <button onclick="window.open('https://wa.me/18996554757', '_blank', 'noopener,noreferrer')">
+    <button onclick="
+    gtag('event', 'click_whatsapp', {
+      'event_category': 'Contato',
+      'event_label': 'Agendar Consulta'
+    });
+    window.open('https://wa.me/18996554757', '_blank', 'noopener,noreferrer');
+  ">
         <svg class="empty" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
           <path fill="none" d="M0 0H24V24H0z"></path>
           <path
@@ -494,7 +510,16 @@
   <div class="agendamento">
     <h2>Pronto para iniciar seu processo terapêutico?</h2>
     <p>Dê o primeiro passo em direção ao seu bem-estar emocional e autoconhecimento.</p>
-    <a href="https://wa.me/18996554757" target="_blank" rel="noopener noreferrer" class="botao-whatsapp">Agendar pelo WhatsApp</a>
+    <a href="https://wa.me/18996554757"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="botao-whatsapp"
+      onclick="gtag('event', 'click_whatsapp', {
+        event_category: 'Contato',
+        event_label: 'Agendar pelo WhatsApp'
+      });">
+      Agendar pelo WhatsApp
+    </a>
   </div>
 </section>
 </main>
