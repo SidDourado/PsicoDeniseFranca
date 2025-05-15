@@ -250,7 +250,7 @@ button:hover .filled {
   color: #985151;
 }
 
-.sobre-text h1 {
+.sobre-text h2 {
   color: hsl(355 33% 72%);
   font-family: 'Poppins';
   font-weight: 600;
@@ -1132,7 +1132,7 @@ button:hover .filled {
   }
 
   .sobre-text h2 {
-    font-size: 30px;
+    font-size: 17px;
     text-align: center;
   }
 
