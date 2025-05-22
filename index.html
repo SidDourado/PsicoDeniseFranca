@@ -39,7 +39,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- JS -->
-  <script defer src="js/script.min.js"></script>
+  <script defer src="js/script.js"></script>
   <!-- Email Js -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <!-- Segurança Recaptcha -->
@@ -92,7 +92,7 @@
 <header>
   <div class="fundoLogo">
     <div class="logoImagem">
-      <img src="img/Logo_denise.webp" alt="Logo do site">
+      <img src="img/ICON-LOGO.webp" alt="Logo do site">
     </div>
     <div class="logo">
       <span id="digitacao"></span>
@@ -120,10 +120,10 @@
             <a class="nav-link" href="#avaliacao">Sessão Gratuita</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#especialidades">Especialidades</a>
+            <a class="nav-link" href="#especialidades">Áreas de Cuidado</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#depoimentos">Depoimentos</a>
+            <a class="nav-link" href="#depoimentos">Feedback</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contato">Contato</a>
@@ -160,13 +160,15 @@
 <!-- Banner Rotativo -->
 <div class="bannerPrincipal">
   <div class="slideFade">
-    <img src="img/1.webp" alt="Terapia online com Denise França">
+    <img src="img/Banner 1.webp" alt="O que é psicanalise">
   </div>
   <div class="slideFade">
-    <img src="img/Banner_cuidado.webp" alt="Cuidado emocional com psicanálise" loading="lazy">
+    <img src="img/Banner 2.webp" alt="Processo Terapêutico" loading="lazy">
   </div>
   <div class="slideFade">
-    <img src="img/2.webp" alt="Sessão de psicanálise personalizada com Denise França" loading="lazy">
+    <a href="https://wa.me/18996554757" target="_blank" rel="noopener noreferrer" aria-label="Agende sua sessão">
+      <img src="img/Banner 3.webp" alt="Agende sua sessão" loading="lazy">
+    </a>
   </div>
 </div>
 
@@ -180,16 +182,14 @@
 <!-- Apresentação -->
 <section class="sobre" id="sobre">
   <div class="fotoProfissional">
-    <img src="img/Denise_Oficial.webp" alt="Dra. Denise Medeiros" loading="lazy">
+    <img src="img/Foto-perfil.webp" alt="Dra. Denise Medeiros" loading="lazy">
   </div>
 
   <div class="sobre-text">
     <h2><span class="txtSobre">Psicanalista</span> Denise França <i class="fa-solid fa-brain cerebro"></i></h2>
-    <p>Especializada em saúde emocional e bem-estar, comprometida em promover uma jornada de autoconhecimento,
-      equilíbrio e transformação pessoal. Com um atendimento humanizado e personalizado, auxilio cada paciente a
-      compreender suas emoções, superar desafios e fortalecer sua saúde mental. Meu propósito é oferecer um espaço
-      seguro e acolhedor, onde você possa se expressar livremente e encontrar caminhos para uma vida mais leve e
-      harmoniosa.</p>
+    <p>Com 42 anos de vida e 23 anos de experiência em aconselhamento conjugal e maternidade, fui curada para curar e agora aplico meus conhecimentos em psicanálise cristã para promover cura, autoconhecimento e liberdade emocional em mulheres. 
+    Ofereço um espaço terapêutico seguro e acolhedor, baseado na integração da psicanálise e empatia, para te ajudar a superar desafios emocionais e alcançar o bem-estar psicológico
+    </p>
   </div>
 </section>
 
@@ -199,27 +199,34 @@
     <div class="specialty-icon">
       <i class="fa-solid fa-star"></i>
     </div>
-    <h3 class="tituloEspecialidades">Especialidades</h3>
+    <h3 class="tituloEspecialidades">Juntos podemos resolver</h3>
   </div>
   <div class="tabs">
-    <button class="tab-link active" onclick="openTab(event, 'ansiedade')">Ansiedade</button>
-    <button class="tab-link" onclick="openTab(event, 'depressao')">Depressão</button>
-    <button class="tab-link" onclick="openTab(event, 'autoestima')">Autoestima</button>
-    <button class="tab-link" onclick="openTab(event, 'relacionamento')">Relacionamentos</button>
+    <button class="tab-link active" onclick="openTab(event, 'trauma')">Traumas</button>
+    <button class="tab-link" onclick="openTab(event, 'rejeicao')">Rejeição</button>
+    <button class="tab-link" onclick="openTab(event, 'abandono')">Abandono</button>
   </div>
-  <div id="ansiedade" class="tab-content active">
-    <p>Tratamento especializado para ansiedade, ajudando a controlar sintomas e melhorar sua qualidade de vida.</p>
+  <div id="trauma" class="tab-content active">
+    <p>Traumas não resolvidos fazem com que a pessoa experimente 
+      reações físicas e emocionais perturbadoras no presente, 
+      enquanto seu corpo e mente continuam a se defender contra 
+      uma ameaça que pertence ao passado.
+    </p>
   </div>
-  <div id="depressao" class="tab-content">
-    <p>Apoio terapêutico para superar a depressão e restaurar seu bem-estar emocional.</p>
+  <div id="rejeicao" class="tab-content">
+    <p>A rejeição pode distorcer nossa percepção, fazendo-nos 
+      imaginar o pior cenário possível. A rejeição ativa um crítico 
+      interno que nos faz sentir “não bons o suficiente”. Distorcendo a 
+      realidade de quem verdadeiramente somos.
+    </p>
   </div>
-  <div id="autoestima" class="tab-content">
-    <p>Fortalecimento da autoestima para que você se sinta mais confiante e seguro.</p>
-  </div>
-
-  <div id="relacionamento" class="tab-content">
-    <p>Orientação para melhoria nos relacionamentos amorosos, familiares e sociais, desenvolvendo habilidades de
-      comunicação e vínculo.</p>
+  <div id="abandono" class="tab-content">
+    <p>O medo do abandono pode levar uma pessoa a "sabotar" 
+      seus relacionamentos. Ela pode reagir constantemente aos 
+      outros de forma ansiosa ou negativa. Abusos, negligências e 
+      perdas dentre e outros traumas podem levar a sentimentos 
+      de abandono e crenças limitantes.
+    </p>
   </div>
 </section>
 
@@ -227,102 +234,37 @@
 <section class="informativos">
   <div class="tituloSection">
     <div class="specialty-icon">
-      <i class="fa-solid fa-face-smile-beam"></i>
+      <i class="fa-solid fa-comment-dots"></i>
     </div>
-    <h3 class="tituloBemEstar">Bem-estar emocional</h3>
+    <h3 class="tituloBemEstar">Segundo Freud</h3>
   </div>
   <div class="fundoCardInfo">
     <div class="book">
-      <p class="textoInformativo">A verdadeira felicidade não está no destino, mas na forma como escolhemos caminhar."
-      </p>
+      <p class="textoInformativo">"A psicanálise é, em essência, uma cura pelo amor."</p>
       <div class="cover">
         <div class="specialty-icon">
-          <i class="fa-solid fa-face-smile"></i>
+          <i class="fas fa-heart"></i>
         </div>
-        <p class="tituloInformativo">O Caminho Para a Felicidade</p>
+        <p class="tituloInformativo">A psicanálise é...</p>
       </div>
     </div>
     <div class="book">
-      <p class="textoInformativo">"Liberte-se do que te prende e dê espaço para a sua melhor versão florescer."</p>
+      <p class="textoInformativo">"Nenhum ser humano é capaz de esconder um segredo. Se a boca se cala, falam as pontas dos dedos."</p>
       <div class="cover">
         <div class="specialty-icon">
-          <i class="fa-solid fa-hands-praying"></i>
+          <i class="fa-solid fa-hand-holding-heart"></i>
         </div>
-        <p class="tituloInformativo">Diga Adeus aos Seus Maus Hábitos</p>
+        <p class="tituloInformativo">Nenhum ser humano é capaz de...</p>
       </div>
     </div>
 
     <div class="book">
-      <p class="textoInformativo">"Liberte-se do que te prende e dê espaço para a sua melhor versão florescer."</p>
+      <p class="textoInformativo">"A voz do inconsciente é sutil, mas ela não descansa até ser ouvida."</p>
       <div class="cover">
         <div class="specialty-icon">
-          <i class="fa-solid fa-hands-praying"></i>
+          <i class="fas fa-bullhorn"></i>
         </div>
-        <p class="tituloInformativo">Diga Adeus aos Seus Maus Hábitos</p>
-      </div>
-    </div>
-  </div>
-  <div class="fundoCardInfo">
-    <div class="book">
-      <p class="textoInformativo">"O amor mais importante é aquele que você cultiva por si mesmo, pois ele guia todos os
-        outros."</p>
-      <div class="cover">
-        <div class="specialty-icon">
-          <i class="fa-solid fa-heart-circle-check"></i>
-        </div>
-        <p class="tituloInformativo">Aprenda a Se Amar Primeiro</p>
-      </div>
-    </div>
-    <div class="book">
-      <p class="textoInformativo">"Cada escolha é uma página da sua história; escreva-a com sabedoria e propósito."</p>
-      <div class="cover">
-        <div class="specialty-icon">
-          <i class="fa-solid fa-arrows-turn-to-dots"></i>
-        </div>
-        <p class="tituloInformativo">As Escolhas Certas na Vida</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Ambiente -->
-<section id="galeria" class="section-padding bg-light">
-  <div class="container">
-    <div class="section-title text-center" data-aos="fade-up">
-      <span class="conheca">Conheça o espaço</span>
-      <h2 class="tituloAmbiente">Ambiente Terapêutico</h2>
-      <div class="title-icon">
-        <span class="iconeGaleria"><i class="fa-solid fa-image"></i></span>
-      </div>
-      <p class="textoAmbiente">Um ambiente acolhedor, confortável e seguro para suas sessões</p>
-    </div>
-    <div class="row mt-5">
-      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
-        <div class="gallery-item">
-          <img src="img/Ambiente1.webp" alt="Consultório" class="img-fluid" loading="lazy">
-          <div class="gallery-overlay">
-            <h5>Consultório</h5>
-            <p>Espaço principal de atendimento</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
-        <div class="gallery-item">
-          <img src="img/Ambiente2.webp" alt="Sala de Espera" class="img-fluid" loading="lazy">
-          <div class="gallery-overlay">
-            <h5>Sala de Espera</h5>
-            <p>Ambiente confortável para aguardar</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
-        <div class="gallery-item">
-          <img src="img/Ambiente3.webp" alt="Espaço de Relaxamento" class="img-fluid" loading="lazy">
-          <div class="gallery-overlay">
-            <h5>Espaço de Relaxamento</h5>
-            <p>Área para momentos de pausa e reflexão</p>
-          </div>
-        </div>
+        <p class="tituloInformativo">A voz do inconsciente é sutil, mas...</p>
       </div>
     </div>
   </div>
@@ -347,7 +289,7 @@
       <div class="form-group">
         <input type="tel" id="whatsapp" name="whatsapp" placeholder="Seu WhatsApp" required>
       </div>
-      <button type="submit" class="btn-enviar">Agendar Sessão</button>
+      <button type="submit" class="btn-enviar">Enviar</button>
     </form>
   </div>
 </section>
@@ -376,19 +318,16 @@
 
 <!-- Depoimentos -->
 <section class="depoimentos" id="depoimentos">
-  <h2>O que dizem os pacientes</h2>
-  <p class="subtitulo">Experiências reais de quem já transformou sua vida</p>
+  <h2>Feedback</h2>
   <div class="carrossel-container">
     <button class="prev" onclick="mudarFeedback(-1)">&#10094;</button>
     <div class="carrossel">
       <div class="feedback">
         <div class="card">
-          <img src="img/RosanaSouza.webp" alt="Paciente Rosana Souza" loading="lazy">
           <div class="info">
             <div class="estrelas">★★★★★</div>
             <p class="texto">
-              Hoje sou uma nova mulher, transformada de dentro pra fora e curada, sei do meu valor, me amo e me cuido, as feridas são cicatrizes e devo tudo isso a Deus e a Denise França
-              minha psicanalista, que com tanto amor, oração e paciência me ajudou a enxergar quem eu sou. Obrigada Denise por tudo.
+              Hoje sou uma nova mulher, transformada de dentro pra fora e curada. Aprendi a reconhecer o meu valor através do autoconhecimento. Minha psicanalista, Denise, que com tanto amor, oração e paciência me ajudou a enxergar quem eu sou! Obrigada por tudo.
             </p>
             <p class="nome">Rosana Souza</p>
           </div>
@@ -396,40 +335,23 @@
       </div>
       <div class="feedback">
         <div class="card">
-          <img src="img/Paciente1.webp" alt="Paciente Mariana Roberta" loading="lazy">
           <div class="info">
             <div class="estrelas">★★★★★</div>
             <p class="texto">
-              A Dra. Denise transformou minha vida! Com sua abordagem acolhedora e
-              profissional, consegui superar a ansiedade que me limitava por anos.
-              Cada sessão é um passo em direção a uma vida mais plena e equilibrada.
+              Uma profissional empática, dedicada, compreensiva e extremamente atenciosa, que sempre me escuta com atenção e cuidado. Sem dúvida, a melhor terapeuta que já conheci.
             </p>
-            <p class="nome">Mariana Roberta</p>
+            <p class="nome">Fernanda Rodrigues</p>
           </div>
         </div>
       </div>
       <div class="feedback">
         <div class="card">
-          <img src="img/Paciente2.webp" alt="Paciente Luan Alves" loading="lazy">
           <div class="info">
             <div class="estrelas">★★★★★</div>
             <p class="texto">
-              Atendimento acolhedor e profissional. Me senti à vontade desde a primeira sessão.
+              Recomendo a qualquer pessoa que esteja em busca de um espaço seguro para refletir e trabalhar suas questões emocionais. Sou profundamente grata pelo trabalho que temos desenvolvido juntas.
             </p>
-            <p class="nome">Luan Alves</p>
-          </div>
-        </div>
-      </div>
-      <div class="feedback">
-        <div class="card">
-          <img src="img/Paciente3.webp" alt="Paciente Pedro Leone" loading="lazy">
-          <div class="info">
-            <div class="estrelas">★★★★★</div>
-            <p class="texto">
-              Encontrei equilíbrio emocional e autoconhecimento que buscava há anos.
-            </p>
-            <p class="nome">Pedro Leone</p>
-          
+            <p class="nome">Tabata de Oliveira</p>
           </div>
         </div>
       </div>
@@ -441,7 +363,6 @@
     <span class="dot" onclick="irParaFeedback(0)"></span>
     <span class="dot" onclick="irParaFeedback(1)"></span>
     <span class="dot" onclick="irParaFeedback(2)"></span>
-    <span class="dot" onclick="irParaFeedback(3)"></span>
   </div>
 </section>
 
@@ -506,13 +427,9 @@
   </div>
   <div class="faq-item">
     <input type="checkbox" id="faq6">
-    <label for="faq6">Como sei se preciso de terapia?</label>
+    <label for="faq6">A análise é baseada em qual metodologia?</label>
     <div class="answer">
-      <p>Você pode considerar iniciar uma terapia se estiver enfrentando sofrimento emocional persistente,
-        dificuldades nos relacionamentos, sentimentos de ansiedade ou tristeza que interferem na sua vida
-        diária, ou se está passando por uma transição de vida significativa. Também é válido buscar terapia
-        para autoconhecimento e desenvolvimento pessoal, mesmo sem a presença de sintomas graves. Uma sessão
-        inicial pode ajudar a avaliar se a terapia é adequada para você neste momento.</p>
+      <p>Utilizamos o método de investigação da mente criado por Freud, conhecido como método psicanalítico, e também incorporamos outros pensadores como Jung e tantos outros. Nosso método é apoiado por contextos bíblicos para criar uma "harmonia entre a psicanálise e os princípios judaico-cristãos".</p>
     </div>
   </div>
 </div>
@@ -528,7 +445,7 @@
   </div>
 
   <div class="agendamento">
-    <h2>Pronto para iniciar seu processo terapêutico?</h2>
+    <h2>Atendimento Presencial</h2>
     <p>Dê o primeiro passo em direção ao seu bem-estar emocional e autoconhecimento.</p>
     <a href="https://wa.me/18996554757"
       target="_blank"
@@ -561,8 +478,8 @@
       <ul>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#avaliacao">Sessão Gratuita</a></li>
-        <li><a href="#especialidades">Especialidades</a></li>
-        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#especialidades">Áreas de Cuidado</a></li>
+        <li><a href="#depoimentos">feedback</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </div>
@@ -578,12 +495,6 @@
         <a href="mailto:denisemedeirospsico@gmail.com">denisemedeirospsico@gmail.com</a>
       </p>
       <p><i class="fas fa-map-marker-alt"></i> Av. Cunha Cintra, 708 - Centro, Penápolis - SP</p>
-    </div>
-
-    <div class="footer-section hours">
-      <h3>Horário de Atendimento</h3>
-      <p><i class="far fa-clock"></i> Segunda a Sexta: 8h às 20h</p>
-      <p><i class="far fa-clock"></i> Sábados: 8h às 12h</p>
       <p><i class="fas fa-shield-alt"></i><a href="privacidade.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a></p>
     </div>
   </div>
